@@ -1,0 +1,11 @@
+[2026-10-21T16:30:19.701Z] LOADED ZEBDA pid=9089
+[2026-10-21T16:30:19.701Z] card=/workspace/brain/Agents Office/cerebro-crew/ZEBDA_AgentCard_v1.5_20261021_Cairo.json
+[2026-10-21T16:30:19.701Z] mission=Coordination + minutes. Keep design-gate queue Rasma→NASAQ→Fakir→Nojj. Track open Tarek calls.
+[2026-10-21T16:30:19.701Z] BLOCKER BLK-HANDOFF [P1] cerebro_handoff missing — /workspace/cerebro_handoff not on this box (Zebda box path)
+[2026-10-21T16:30:19.701Z] BLOCKER BLK-01 [P0] Cerebro-core feat/ds-v1-1 unreachable locally — No local checkout of njr39/Cerebro-core; staging under outputs only
+[2026-10-21T16:30:19.701Z] BLOCKER BLK-02 [P0] CEREBRO wordmark BLOCKED — White-on-white — placeholder slot only; do not approximate
+[2026-10-21T16:30:19.701Z] BLOCKER BLK-03 [P1] Open Tarek calls ×3 — Leave switchable: parallax 6px|none · status board 4-col|not · shadow tone
+[2026-10-21T16:30:19.702Z] WROTE COORD_BOARD_20261021.md (954 bytes)
+[2026-10-21T16:30:19.702Z] WROTE LANE_STATUS.md (91 bytes)
+[2026-10-21T16:30:19.702Z] WROTE PROCESS.json (3011 bytes)
+[2026-10-21T16:30:19.702Z] DONE ZEBDA exit=0 produced=3 blockers=4

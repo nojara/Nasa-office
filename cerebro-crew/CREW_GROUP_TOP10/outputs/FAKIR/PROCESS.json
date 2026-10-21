@@ -1,0 +1,89 @@
+{
+  "latin": "FAKIR",
+  "arabic": "فاكِر",
+  "agent_id": "19733431-9122-41c4-82e5-2da2d5274288",
+  "role": "Executive Creative Director",
+  "field_colour": "#5A1420",
+  "avatar_status": "READY_v2.1",
+  "pid": 9047,
+  "mode": "local-terminal",
+  "external_services": [],
+  "loaded": {
+    "agentcard": "/workspace/brain/Agents Office/cerebro-crew/FAKIR_AgentCard_v1.5_20261021_Cairo.json",
+    "capabilities": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/capabilities/FAKIR.md",
+    "memory": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/memory/FAKIR.md",
+    "knowledge": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/knowledge/FAKIR.md",
+    "card_keys": [
+      "schema",
+      "schema_version",
+      "source_pack",
+      "source_pack_locked",
+      "built_by",
+      "built_at",
+      "status",
+      "design_gate",
+      "publish",
+      "row",
+      "agent_id",
+      "name",
+      "name_status",
+      "meaning",
+      "role",
+      "avatar",
+      "output_standard",
+      "file_naming",
+      "cerebro_widget",
+      "avatar_system_ref"
+    ],
+    "capabilities_bytes": 695,
+    "memory_bytes": 699,
+    "knowledge_bytes": 1227
+  },
+  "mission": "ECD craft pass after NASAQ. No invented visuals. Design gate third seat.",
+  "produced": [
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/FAKIR/FAKIR_CEREBRO_Craft_READINESS_20261021_Cairo_v1.0.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/FAKIR/LANE_STATUS.md"
+  ],
+  "blockers": [
+    {
+      "id": "BLK-HANDOFF",
+      "title": "cerebro_handoff missing",
+      "severity": "P1",
+      "detail": "/workspace/cerebro_handoff not on this box (Zebda box path)"
+    },
+    {
+      "id": "BLK-01",
+      "title": "Cerebro-core feat/ds-v1-1 unreachable locally",
+      "severity": "P0",
+      "detail": "No local checkout of njr39/Cerebro-core; staging under outputs only"
+    },
+    {
+      "id": "BLK-02",
+      "title": "CEREBRO wordmark BLOCKED",
+      "severity": "P0",
+      "detail": "White-on-white — placeholder slot only; do not approximate"
+    },
+    {
+      "id": "BLK-03",
+      "title": "Open Tarek calls ×3",
+      "severity": "P1",
+      "detail": "Leave switchable: parallax 6px|none · status board 4-col|not · shadow tone"
+    }
+  ],
+  "hard_rules": [
+    "Repo njr39/Cerebro-core branch feat/ds-v1-1 ONLY",
+    "No new branches / merges / PRs / deploys",
+    "Do not touch voice, sound, auth, Google, gesture thresholds, WebGL renderer, dependencies",
+    "Review order lit: NASAQ → Fakir → Tarek",
+    "Design gate: Rasma → NASAQ → Fakir → Nojj",
+    "Internal only — publish nothing",
+    "HAQQ not HAQI",
+    "NASAQ/MADAR/NABR/Samna avatars PLACEHOLDER — do not invent"
+  ],
+  "earlier_run_check": {
+    "id": "run-51679fc3-8284-4c48-91a8-8029a2257458",
+    "status": "NOT_AVAILABLE_LOCALLY",
+    "note": "No local transcript/artifact for this run id on this box"
+  },
+  "finished_at": "2026-10-21T16:30:19.699Z"
+}

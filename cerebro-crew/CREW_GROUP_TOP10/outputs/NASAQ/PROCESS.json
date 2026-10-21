@@ -1,0 +1,109 @@
+{
+  "latin": "NASAQ",
+  "arabic": "نَسَق",
+  "agent_id": "dcffa3ef-682f-4e5f-8376-233e057a0dd8",
+  "role": "Design-library owner and brand-match checker",
+  "field_colour": "#0F5E5A",
+  "avatar_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+  "pid": 9045,
+  "mode": "local-terminal",
+  "external_services": [],
+  "loaded": {
+    "agentcard": "/workspace/brain/Agents Office/cerebro-crew/NASAQ_AgentCard_v1.5_20261021_Cairo.json",
+    "capabilities": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/capabilities/NASAQ.md",
+    "memory": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/memory/NASAQ.md",
+    "knowledge": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/knowledge/NASAQ.md",
+    "card_keys": [
+      "schema",
+      "schema_version",
+      "source_pack",
+      "source_pack_locked",
+      "built_by",
+      "built_at",
+      "status",
+      "design_gate",
+      "publish",
+      "row",
+      "agent_id",
+      "name",
+      "name_status",
+      "meaning",
+      "role",
+      "avatar",
+      "output_standard",
+      "file_naming",
+      "cerebro_widget",
+      "avatar_system_ref"
+    ],
+    "capabilities_bytes": 766,
+    "memory_bytes": 699,
+    "knowledge_bytes": 1230
+  },
+  "mission": "Brand-match + D0 tokens. Object shade #0A131A is test not frozen. Pass Basmala phone/tablet; desktop retina HOLD. Review before Fakir/Tarek.",
+  "produced": [
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/LANE_STATUS.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/NASAQ_DS_v1_1_BRAND_MATCH_CHECKLIST_GateBrandHeader_20261021_Cairo_v1.0.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/NASAQ_DS_v1_1_TOKEN_NOTES_GateBrandHeader_20261021_Cairo_v1.0.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/NASAQ_DS_v1_1_D0_TOKEN_NOTES_GateBrandHeader_20261021_Cairo_v1.0.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/NASAQ_DS_v1_1_BASMALA_PASS_PATH_phone-tablet_20261021_Cairo_v1.0.md"
+  ],
+  "basmala": {
+    "phone_tablet_path": "CONFIRMED",
+    "phone_tablet_visual_pass": "BLOCKED_PENDING_VERIFIED_PNG_468x76",
+    "desktop_retina": "HOLD"
+  },
+  "blockers": [
+    {
+      "id": "BLK-HANDOFF",
+      "title": "cerebro_handoff missing",
+      "severity": "P1",
+      "detail": "/workspace/cerebro_handoff not on this box (Zebda box path)"
+    },
+    {
+      "id": "BLK-01",
+      "title": "Cerebro-core feat/ds-v1-1 unreachable locally",
+      "severity": "P0",
+      "detail": "No local checkout of njr39/Cerebro-core; staging under outputs only"
+    },
+    {
+      "id": "BLK-BASMALA-ASSET",
+      "title": "Basmala PNG 468x76 not in FINAL_v2.1 / handoff",
+      "severity": "P0",
+      "detail": "PASS path confirmed; visual stamp deferred (MUSA-BLK-02); desktop retina HOLD"
+    },
+    {
+      "id": "BLK-02",
+      "title": "CEREBRO wordmark BLOCKED",
+      "severity": "P0",
+      "detail": "White-on-white — placeholder slot only; do not approximate"
+    },
+    {
+      "id": "BLK-03",
+      "title": "Open Tarek calls ×3",
+      "severity": "P1",
+      "detail": "Leave switchable: parallax 6px|none · status board 4-col|not · shadow tone"
+    },
+    {
+      "id": "BLK-0A131A",
+      "title": "Object shade #0A131A TEST not frozen",
+      "severity": "P1",
+      "detail": "D0 stays; do not promote to canvas"
+    }
+  ],
+  "hard_rules": [
+    "Repo njr39/Cerebro-core branch feat/ds-v1-1 ONLY",
+    "No new branches / merges / PRs / deploys",
+    "Do not touch voice, sound, auth, Google, gesture thresholds, WebGL renderer, dependencies",
+    "Review order lit: NASAQ → Fakir → Tarek",
+    "Design gate: Rasma → NASAQ → Fakir → Nojj",
+    "Internal only — publish nothing",
+    "HAQQ not HAQI",
+    "NASAQ/MADAR/NABR/Samna avatars PLACEHOLDER — do not invent"
+  ],
+  "earlier_run_check": {
+    "id": "run-51679fc3-8284-4c48-91a8-8029a2257458",
+    "status": "NOT_AVAILABLE_LOCALLY",
+    "note": "No local transcript/artifact for this run id on this box"
+  },
+  "finished_at": "2026-10-21T16:30:19.671Z"
+}

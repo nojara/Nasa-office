@@ -1,0 +1,111 @@
+{
+  "schema": "nojara.cerebro.MadarLoaderTimeline",
+  "agent": "MADAR",
+  "agent_id": "15e0b024-e7c9-47e6-ba15-97214659b500",
+  "latin": "MADAR",
+  "arabic": "مَدَار",
+  "date_cairo": "2026-10-21",
+  "branch_target": "feat/ds-v1-1",
+  "status": "INTERNAL_LOCKED",
+  "locked_at_cairo": "2026-10-21 19:29",
+  "avatar": "PLACEHOLDER_NO_REFERENCE_HEAD",
+  "envelope_ms_proposed": 12000,
+  "as_built_forge_max_ms_reference": 8000,
+  "tarek_owned_window_ms": [0, 1800],
+  "placeholder_until_tarek_ms": [1800, 12000],
+  "signature_ease": "cubic-bezier(0.45, 0, 0.25, 1)",
+  "exit_ease": "cubic-bezier(0.7, 0, 0.84, 0)",
+  "parallax": {
+    "modes": ["6px", "none"],
+    "token": "--parallax-max",
+    "madar_picks": false,
+    "reduced_motion_forces": "none",
+    "never_on": ["L_basmala"]
+  },
+  "layers_0_1p8s": [
+    {
+      "id": "L_canvas",
+      "element": "boot_canvas",
+      "motion": "present_hold",
+      "notes": "D0 field; no colour invention"
+    },
+    {
+      "id": "L_basmala",
+      "element": "basmala_png_468x76",
+      "motion": "static",
+      "opacity": 1,
+      "from_ms": 0,
+      "notes": "never remounts; never spins with sphere"
+    },
+    {
+      "id": "L_wordmark_slot",
+      "element": "cerebro_wordmark",
+      "motion": "placeholder_slot_only",
+      "blocked": true,
+      "notes": "white-on-white BLOCKED"
+    },
+    {
+      "id": "L_brand_header",
+      "element": "PersistentBrandHeader",
+      "motion": "mount_once",
+      "from_ms": 0,
+      "notes": "single instance; no remount"
+    },
+    {
+      "id": "L_core_presence",
+      "element": "core_standin_dom",
+      "motion": {
+        "opacity": [0, 1],
+        "scale": [0.98, 1.0],
+        "from_ms": 0,
+        "to_ms": 900,
+        "ease": "cubic-bezier(0.45, 0, 0.25, 1)"
+      },
+      "notes": "no WebGL / mesh / shader"
+    },
+    {
+      "id": "L_status",
+      "element": "status_line",
+      "string_en": "Establishing Cerebro",
+      "fade_in_ms": [0, 200],
+      "hold_until_ms": 1800,
+      "ar_owner": "KATIB"
+    },
+    {
+      "id": "L_progress",
+      "element": "thin_progress_track",
+      "maps_to": "elapsed_over_1800_or_parent_envelope",
+      "implementation_choice_open": true
+    },
+    {
+      "id": "L_takeoff",
+      "element": "take_off_control",
+      "visible_from_ms": 200,
+      "ends_loader": true
+    },
+    {
+      "id": "L_parallax",
+      "element": "optional_pointer_parallax",
+      "applies_to": ["L_brand_header", "L_core_presence"],
+      "switchable": true
+    }
+  ],
+  "reduced_motion": {
+    "establish_cap_ms": 300,
+    "allowed": ["opacity"],
+    "forbidden": ["scale", "translate", "parallax", "drift"]
+  },
+  "handoff_at_ms": 1800,
+  "handoff_to": "MADAR_LOADER_PLACEHOLDER_1p8_12s_20261021_Cairo.md",
+  "non_goals": [
+    "voice",
+    "sound",
+    "WebGL_globe_lighting",
+    "deps",
+    "avatar_head",
+    "wordmark_art",
+    "parallax_pick",
+    "4col_board",
+    "shadow_tone"
+  ]
+}

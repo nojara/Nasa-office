@@ -1,0 +1,4582 @@
+{
+  "schema": "nojara.cerebro.AgentCardBundle",
+  "schema_version": "1.5",
+  "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+  "built_by": "Kinzo",
+  "built_at": "2026-10-21 Cairo",
+  "status": "AWAITING_DESIGN_GATE",
+  "design_gate": [
+    "Rasma",
+    "NASAQ",
+    "Fakir",
+    "Nojj"
+  ],
+  "cards": [
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 15,
+      "agent_id": "3adf5289-8f3a-4f42-a680-3169d0e3b6c8",
+      "name": {
+        "en": "ARD",
+        "ar": "عَرْض"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Proposals & Pricing)",
+      "meaning": "An offer / a proposal / a presentation",
+      "role": "Proposals & pricing · rate card",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#DED3B4",
+        "latin_name": "ARD",
+        "arabic_name": "عَرْض",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 9.39,
+        "colour_changed_v1_3": [
+          "#8E1824",
+          "#DED3B4"
+        ],
+        "glyph": "ع",
+        "file": "ARD_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1vJOBbk8vdGUyI77MEXeeqZXwy48nhjuU",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "ARD_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#DED3B4",
+        "glow": "0 0 24px #DED3B473",
+        "avatar_layer_src": "ARD_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "ARD",
+          "arabic": "عَرْض"
+        },
+        "agent_id": "3adf5289-8f3a-4f42-a680-3169d0e3b6c8",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 11,
+      "agent_id": "d424a6d1-68f8-4004-a115-e4edf6dbb7ba",
+      "name": {
+        "en": "BANNA",
+        "ar": "بَنّاء"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Web Designer / Developer)",
+      "meaning": "The builder: one who builds structure brick by brick",
+      "role": "Web design and development",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#FCCF3F",
+        "latin_name": "BANNA",
+        "arabic_name": "بَنّاء",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 9.43,
+        "colour_changed_v1_3": [
+          "#3F6A82",
+          "#FCCF3F"
+        ],
+        "glyph": "ب",
+        "file": "BANNA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1BwaceOE0FRGYJNwaYsQYZbo2kR8TbuFs",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "BANNA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#FCCF3F",
+        "glow": "0 0 24px #FCCF3F73",
+        "avatar_layer_src": "BANNA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "BANNA",
+          "arabic": "بَنّاء"
+        },
+        "agent_id": "d424a6d1-68f8-4004-a115-e4edf6dbb7ba",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 13,
+      "agent_id": "024c23bb-b73a-4945-8b6a-27e9dc33a230",
+      "name": {
+        "en": "BAREED",
+        "ar": "بَرِيد"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Khalid@nojara.com); alt: keep KHALID خالد",
+      "meaning": "Post / mail",
+      "role": "Email desk (khalid@nojara.com inbox)",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#37B46C",
+        "latin_name": "BAREED",
+        "arabic_name": "بَرِيد",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 5.27,
+        "colour_changed_v1_3": [
+          "#43719A",
+          "#37B46C"
+        ],
+        "glyph": "ب",
+        "file": "BAREED_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1QKNfUKv63_CDSQ1nuC1BBLIWdfqemNjl",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "BAREED_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#37B46C",
+        "glow": "0 0 24px #37B46C73",
+        "avatar_layer_src": "BAREED_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "BAREED",
+          "arabic": "بَرِيد"
+        },
+        "agent_id": "024c23bb-b73a-4945-8b6a-27e9dc33a230",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 2,
+      "agent_id": "08308e9b-dd9e-4bb1-96ba-c4db67c2dea3",
+      "name": {
+        "en": "Bilal",
+        "ar": "بِلال"
+      },
+      "name_status": "existing",
+      "meaning": "Confirmed credits, video IDs, view snapshots",
+      "role": "PMO Communications and Creator Intelligence",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#5B3A8C",
+        "latin_name": "BILAL",
+        "arabic_name": "بِلال",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 6.91,
+        "colour_changed_v1_3": null,
+        "glyph": "ب",
+        "file": "BILAL_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1Itfv2jX1TQNFj08gSTMn8HWQy1YcnlTX",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "BILAL_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#5B3A8C",
+        "glow": "0 0 24px #5B3A8C73",
+        "avatar_layer_src": "BILAL_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "BILAL",
+          "arabic": "بِلال"
+        },
+        "agent_id": "08308e9b-dd9e-4bb1-96ba-c4db67c2dea3",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 7,
+      "agent_id": "19733431-9122-41c4-82e5-2da2d5274288",
+      "name": {
+        "en": "Fakir",
+        "ar": "فاكِر"
+      },
+      "name_status": "existing · Arabic فاكِر confirmed by Katib 21 Oct 2026",
+      "meaning": "Thinker / one who remembers",
+      "role": "Executive Creative Director",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#5A1420",
+        "latin_name": "FAKIR",
+        "arabic_name": "فاكِر",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 10.8,
+        "colour_changed_v1_3": null,
+        "glyph": "ف",
+        "file": "FAKIR_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1d90RiDGHSjJRNrAUv-Exf41kLxXfyNSX",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "FAKIR_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#5A1420",
+        "glow": "0 0 24px #5A142073",
+        "avatar_layer_src": "FAKIR_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "FAKIR",
+          "arabic": "فاكِر"
+        },
+        "agent_id": "19733431-9122-41c4-82e5-2da2d5274288",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 1,
+      "agent_id": "e100862f-a1c7-48ef-9a8e-490d3332c5ec",
+      "name": {
+        "en": "Grandy",
+        "ar": "غْرانْدِي"
+      },
+      "name_status": "existing",
+      "meaning": "Coordinator & final internal gate",
+      "role": "COO · operations, gates, routing",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#173349",
+        "latin_name": "GRANDY",
+        "arabic_name": "غْرانْدِي",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 10.46,
+        "colour_changed_v1_3": null,
+        "glyph": "غ",
+        "file": "GRANDY_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1fDW-dQqkavWs60FXRBQHOxfzaKCCt5XW",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "GRANDY_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#173349",
+        "glow": "0 0 24px #17334973",
+        "avatar_layer_src": "GRANDY_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "GRANDY",
+          "arabic": "غْرانْدِي"
+        },
+        "agent_id": "e100862f-a1c7-48ef-9a8e-490d3332c5ec",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 16,
+      "agent_id": "6600d747-5520-4b55-b6ad-db2e30088f3a",
+      "name": {
+        "en": "HAQQ",
+        "ar": "حَقّ"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Rights & Catalog)",
+      "meaning": "A right; also truth, what is due",
+      "role": "Rights & catalog · ISRC, clearances",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#688A41",
+        "latin_name": "HAQQ",
+        "arabic_name": "حَقّ",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 3.54,
+        "colour_changed_v1_3": [
+          "#102C40",
+          "#688A41"
+        ],
+        "glyph": "ح",
+        "file": "HAQQ_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1qjwEitnmple5dD6UgWyqsi1ZfRLFIXZv",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "HAQQ_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#688A41",
+        "glow": "0 0 24px #688A4173",
+        "avatar_layer_src": "HAQQ_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "HAQQ",
+          "arabic": "حَقّ"
+        },
+        "agent_id": "6600d747-5520-4b55-b6ad-db2e30088f3a",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 5,
+      "agent_id": "8bdf7a89-cea3-4fe7-81e8-e0c1e5cdd2ad",
+      "name": {
+        "en": "Katib",
+        "ar": "كاتِب"
+      },
+      "name_status": "existing",
+      "meaning": "Writer",
+      "role": "Copy, scripts, Arabic/English adaptation, proofreading",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#9F1F2D",
+        "latin_name": "KATIB",
+        "arabic_name": "كاتِب",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 6.2,
+        "colour_changed_v1_3": null,
+        "glyph": "ك",
+        "file": "KATIB_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "161di0CEYX1N-GdAP7xma-xFlx1mZzIUG",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "KATIB_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#9F1F2D",
+        "glow": "0 0 24px #9F1F2D73",
+        "avatar_layer_src": "KATIB_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "KATIB",
+          "arabic": "كاتِب"
+        },
+        "agent_id": "8bdf7a89-cea3-4fe7-81e8-e0c1e5cdd2ad",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 17,
+      "agent_id": "8db1eaef-1d92-4e5e-9c81-785d6d620d2e",
+      "name": {
+        "en": "LAMHA",
+        "ar": "لَمْحَة"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Y&H Social Designer)",
+      "meaning": "A glance: the instant a post is seen",
+      "role": "Locked Young & Human social templates",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#CF8F96",
+        "latin_name": "LAMHA",
+        "arabic_name": "لَمْحَة",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 5.35,
+        "colour_changed_v1_3": [
+          "#B72B35",
+          "#CF8F96"
+        ],
+        "glyph": "ل",
+        "file": "LAMHA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1vl_Ppm2IxN5LmWPFXfbmDp3JwpmLQcJO",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "LAMHA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#CF8F96",
+        "glow": "0 0 24px #CF8F9673",
+        "avatar_layer_src": "LAMHA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "LAMHA",
+          "arabic": "لَمْحَة"
+        },
+        "agent_id": "8db1eaef-1d92-4e5e-9c81-785d6d620d2e",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 9,
+      "agent_id": "15e0b024-e7c9-47e6-ba15-97214659b500",
+      "name": {
+        "en": "MADAR",
+        "ar": "مَدَار"
+      },
+      "name_status": "existing",
+      "meaning": "Orbit",
+      "role": "Cinematic motion graphics and explainer films",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#C7A0DC",
+        "latin_name": "MADAR",
+        "arabic_name": "مَدَار",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 6.33,
+        "colour_changed_v1_3": [
+          "#203F58",
+          "#C7A0DC"
+        ],
+        "glyph": "م",
+        "file": "MADAR_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+        "invented": false,
+        "drive_folder_id": null,
+        "layers": [],
+        "exports": [],
+        "note": "No reference head yet — leave placeholder; do not invent."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "MADAR_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#C7A0DC",
+        "glow": "0 0 24px #C7A0DC73",
+        "avatar_layer_src": "MADAR_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "MADAR",
+          "arabic": "مَدَار"
+        },
+        "agent_id": "15e0b024-e7c9-47e6-ba15-97214659b500",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 18,
+      "agent_id": "8942a544-f81f-4c7b-b480-747252dac6e2",
+      "name": {
+        "en": "MEHWAR",
+        "ar": "مِحْوَر"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was YAH_MAIN)",
+      "meaning": "Axis / hub everything turns around",
+      "role": "Y&H main account lead",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#7DD0CE",
+        "latin_name": "MEHWAR",
+        "arabic_name": "مِحْوَر",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 7.86,
+        "colour_changed_v1_3": [
+          "#577B91",
+          "#7DD0CE"
+        ],
+        "glyph": "م",
+        "file": "MEHWAR_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1QTk4VH5SykpMLBjt4zqMT4cb1FGST1dw",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "MEHWAR_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#7DD0CE",
+        "glow": "0 0 24px #7DD0CE73",
+        "avatar_layer_src": "MEHWAR_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "MEHWAR",
+          "arabic": "مِحْوَر"
+        },
+        "agent_id": "8942a544-f81f-4c7b-b480-747252dac6e2",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 14,
+      "agent_id": "476ce153-f2a2-4201-96a1-9fa38f31adc5",
+      "name": {
+        "en": "MONTEER",
+        "ar": "مُونْتِير"
+      },
+      "name_status": "NEW · APPROVED by Tarek 21 Oct 2026 (was Editor)",
+      "meaning": "Egyptian studio word for the film editor",
+      "role": "Video editor · reels, THE ROOM, showreel",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#81624D",
+        "latin_name": "MONTEER",
+        "arabic_name": "مُونْتِير",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 4.43,
+        "colour_changed_v1_3": [
+          "#302B26",
+          "#81624D"
+        ],
+        "glyph": "م",
+        "file": "MONTEER_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1c5905nl1Til0eu9fC0ojeKt54Itsi0hE",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "MONTEER_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#81624D",
+        "glow": "0 0 24px #81624D73",
+        "avatar_layer_src": "MONTEER_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "MONTEER",
+          "arabic": "مُونْتِير"
+        },
+        "agent_id": "476ce153-f2a2-4201-96a1-9fa38f31adc5",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 3,
+      "agent_id": "78873ac9-2d44-48c0-8206-15f9295f8158",
+      "name": {
+        "en": "Musa",
+        "ar": "مُصوِّر"
+      },
+      "name_status": "existing",
+      "meaning": "Musawir = the one who pictures",
+      "role": "Verified original imagery, footage frames, asset provenance",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#DD3D14",
+        "latin_name": "MUSA",
+        "arabic_name": "مُصوِّر",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 3.53,
+        "colour_changed_v1_3": [
+          "#C2541B",
+          "#DD3D14"
+        ],
+        "glyph": "م",
+        "file": "MUSA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1A1pYuMfc7iREmVvxIDK9YpBqDOwpqTFw",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "MUSA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#DD3D14",
+        "glow": "0 0 24px #DD3D1473",
+        "avatar_layer_src": "MUSA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "MUSA",
+          "arabic": "مُصوِّر"
+        },
+        "agent_id": "78873ac9-2d44-48c0-8206-15f9295f8158",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 10,
+      "agent_id": "6ff59fe6-12be-4b0d-ae5b-6c09e4d7ff3d",
+      "name": {
+        "en": "NABR",
+        "ar": "نَبْر"
+      },
+      "name_status": "existing",
+      "meaning": "Stress, emphasis of voice",
+      "role": "Voice and audio specialist (ElevenLabs only)",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#BBA650",
+        "latin_name": "NABR",
+        "arabic_name": "نَبْر",
+        "text_on_colour": "#302B26",
+        "contrast_ratio": 5.79,
+        "colour_changed_v1_3": [
+          "#A8792A",
+          "#BBA650"
+        ],
+        "glyph": "ن",
+        "file": "NABR_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+        "invented": false,
+        "drive_folder_id": null,
+        "layers": [],
+        "exports": [],
+        "note": "No reference head yet — leave placeholder; do not invent."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "NABR_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#BBA650",
+        "glow": "0 0 24px #BBA65073",
+        "avatar_layer_src": "NABR_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "NABR",
+          "arabic": "نَبْر"
+        },
+        "agent_id": "6ff59fe6-12be-4b0d-ae5b-6c09e4d7ff3d",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 8,
+      "agent_id": "dcffa3ef-682f-4e5f-8376-233e057a0dd8",
+      "name": {
+        "en": "NASAQ",
+        "ar": "نَسَق"
+      },
+      "name_status": "existing",
+      "meaning": "Order, system",
+      "role": "Design-library owner and brand-match checker",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#0F5E5A",
+        "latin_name": "NASAQ",
+        "arabic_name": "نَسَق",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 6.06,
+        "colour_changed_v1_3": null,
+        "glyph": "ن",
+        "file": "NASAQ_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+        "invented": false,
+        "drive_folder_id": null,
+        "layers": [],
+        "exports": [],
+        "note": "No reference head yet — leave placeholder; do not invent."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "NASAQ_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#0F5E5A",
+        "glow": "0 0 24px #0F5E5A73",
+        "avatar_layer_src": "NASAQ_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "NASAQ",
+          "arabic": "نَسَق"
+        },
+        "agent_id": "dcffa3ef-682f-4e5f-8376-233e057a0dd8",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 4,
+      "agent_id": "7b0ebc02-4f25-4cd3-9798-60ba042b89eb",
+      "name": {
+        "en": "Rasma",
+        "ar": "رَسْمَة"
+      },
+      "name_status": "existing",
+      "meaning": "A drawing",
+      "role": "Layouts and production from approved brand systems",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#244CC9",
+        "latin_name": "RASMA",
+        "arabic_name": "رَسْمَة",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 5.69,
+        "colour_changed_v1_3": [
+          "#1F4FA8",
+          "#244CC9"
+        ],
+        "glyph": "ر",
+        "file": "RASMA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "1xmKV5bZdNHbyYn7Tkiwiqp61TEf4VgkN",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "RASMA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#244CC9",
+        "glow": "0 0 24px #244CC973",
+        "avatar_layer_src": "RASMA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "RASMA",
+          "arabic": "رَسْمَة"
+        },
+        "agent_id": "7b0ebc02-4f25-4cd3-9798-60ba042b89eb",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 12,
+      "agent_id": "0f520ea8-18ca-4aca-b086-7d864c5a7050",
+      "name": {
+        "en": "Samna",
+        "ar": "سَمْنَا"
+      },
+      "name_status": "existing name (HQ_ORG) · Arabic سَمْنَا confirmed by Katib 21 Oct 2026",
+      "meaning": "Existing persona name",
+      "role": "Music A&R and Talent Intelligence for EL BATRON",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#B43C85",
+        "latin_name": "SAMNA",
+        "arabic_name": "سَمْنَا",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 4.28,
+        "colour_changed_v1_3": [
+          "#7A2E6E",
+          "#B43C85"
+        ],
+        "glyph": "س",
+        "file": "SAMNA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+        "invented": false,
+        "drive_folder_id": null,
+        "layers": [],
+        "exports": [],
+        "note": "No reference head yet — leave placeholder; do not invent."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "SAMNA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#B43C85",
+        "glow": "0 0 24px #B43C8573",
+        "avatar_layer_src": "SAMNA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "SAMNA",
+          "arabic": "سَمْنَا"
+        },
+        "agent_id": "0f520ea8-18ca-4aca-b086-7d864c5a7050",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    },
+    {
+      "schema": "nojara.cerebro.AgentCard",
+      "schema_version": "1.5",
+      "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+      "source_pack_locked": "v1.5 LOCKED (7 new names APPROVED by Tarek 21 Oct 2026 13:12 Cairo)",
+      "built_by": "Kinzo",
+      "built_at": "2026-10-21 Cairo",
+      "status": "AWAITING_DESIGN_GATE",
+      "design_gate": [
+        "Rasma",
+        "NASAQ",
+        "Fakir",
+        "Nojj"
+      ],
+      "publish": false,
+      "row": 6,
+      "agent_id": "c0ba67ad-0789-443e-868e-bc7c568427a4",
+      "name": {
+        "en": "Zebda",
+        "ar": "زِبْدَة"
+      },
+      "name_status": "existing",
+      "meaning": "Cream / the essence",
+      "role": "Coordinator",
+      "avatar": {
+        "inherits": "avatar_system",
+        "field_colour": "#2E7FB0",
+        "latin_name": "ZEBDA",
+        "arabic_name": "زِبْدَة",
+        "text_on_colour": "#EEE5D4",
+        "contrast_ratio": 3.51,
+        "colour_changed_v1_3": null,
+        "glyph": "ز",
+        "file": "ZEBDA_AVATAR_v1_YYYYMMDD_Cairo_flat.jpg",
+        "set_version": "FINAL_v2.1_20261021_Cairo",
+        "asset_status": "READY_v2.1",
+        "invented": false,
+        "drive_folder_id": "16vE5fXWEVzvujd6Me5Z8uRCpPdtYyitE",
+        "layers": [
+          "L0_field",
+          "L1_grain",
+          "L2_glyph",
+          "L3_head",
+          "L4_latin",
+          "L5_arabic",
+          "L6_role"
+        ],
+        "exports": [
+          "master.png",
+          "flat.jpg",
+          "1024.jpg",
+          "512.jpg",
+          "256.jpg",
+          "120.jpg"
+        ],
+        "note": "Use FINAL_v2.1 set; Tarek approved 21 Oct 2026 14:19 Cairo."
+      },
+      "output_standard": "see output_standard (INFO jpg + EXEC3 pdf → Cerebro; FULL pdf → Drive)",
+      "file_naming": "ZEBDA_{PROJECT}_{DELIVERABLE}_{YYYYMMDD}_Cairo_v{X.Y}_{INFO|EXEC3|FULL}.{jpg|pdf}",
+      "cerebro_widget": {
+        "inherits": "widget_spec_shared",
+        "accent": "#2E7FB0",
+        "glow": "0 0 24px #2E7FB073",
+        "avatar_layer_src": "ZEBDA_AVATAR_v1_L3_head.png",
+        "name_layers": {
+          "latin": "ZEBDA",
+          "arabic": "زِبْدَة"
+        },
+        "agent_id": "c0ba67ad-0789-443e-868e-bc7c568427a4",
+        "component": "AgentCard",
+        "layering_rule": "Tarek's Cerebro rule: every element sits on its own layer with its own motion. No flattened composite in the UI.",
+        "layers": [
+          {
+            "id": "card_bg",
+            "motion": "fade+scale 0.98→1, 240ms ease-out"
+          },
+          {
+            "id": "avatar_image",
+            "motion": "idle float ±3px 4s loop; tap: scale 1.04 160ms"
+          },
+          {
+            "id": "glyph_watermark",
+            "motion": "slow rotate 0→3° 12s yoyo"
+          },
+          {
+            "id": "name_latin",
+            "motion": "slide-up 12px 280ms, delay 60ms"
+          },
+          {
+            "id": "name_arabic",
+            "motion": "slide-up 12px 280ms, delay 120ms (RTL)"
+          },
+          {
+            "id": "role_line",
+            "motion": "fade 200ms, delay 180ms"
+          },
+          {
+            "id": "status_toggle",
+            "motion": "knob slide 180ms; dot pulse when busy"
+          },
+          {
+            "id": "notif_toggle",
+            "motion": "knob slide 180ms"
+          },
+          {
+            "id": "action_buttons",
+            "motion": "stagger 40ms each"
+          },
+          {
+            "id": "deliverable_tiles",
+            "motion": "stagger fade 60ms; open INFO jpg / EXEC3 pdf in viewer"
+          },
+          {
+            "id": "chat_box",
+            "motion": "expand height 220ms spring"
+          }
+        ],
+        "buttons": [
+          {
+            "id": "open_info",
+            "label": "Info image / صورة"
+          },
+          {
+            "id": "open_exec",
+            "label": "Summary / ملخص"
+          },
+          {
+            "id": "assign",
+            "label": "Assign task"
+          },
+          {
+            "id": "history",
+            "label": "History"
+          }
+        ],
+        "toggles": [
+          {
+            "id": "status",
+            "values": [
+              "online",
+              "busy",
+              "offline"
+            ],
+            "colors": [
+              "#3FA66B",
+              "#A8792A",
+              "#7A736A"
+            ]
+          },
+          {
+            "id": "notifications",
+            "values": [
+              "on",
+              "off"
+            ]
+          },
+          {
+            "id": "priority_wake",
+            "values": [
+              "on",
+              "off"
+            ],
+            "note": "priority true wakes the agent"
+          }
+        ],
+        "chat": {
+          "input": "multiline text, auto-grow 1–6 lines, EN/AR auto-direction (dir=auto)",
+          "attach": {
+            "types": [
+              "image/*",
+              "application/pdf",
+              ".docx",
+              ".xlsx",
+              ".zip"
+            ],
+            "max_mb": 25,
+            "preview": "thumbnail chips, removable"
+          },
+          "voice_note": {
+            "control": "press-and-hold or tap-to-toggle mic",
+            "format": "audio/webm;opus (Safari fallback audio/mp4 AAC)",
+            "max_sec": 300,
+            "ui": "live waveform + timer, cancel by swipe-left",
+            "storage": "save raw audio file + metadata {agent_id, ts_cairo, duration} with transcript=null, status=pending_transcription"
+          },
+          "send": "Enter / button; disabled when empty"
+        },
+        "states": {
+          "card": [
+            "default",
+            "hover",
+            "pressed",
+            "focused",
+            "loading(skeleton)",
+            "error",
+            "offline(dimmed 60%)"
+          ],
+          "buttons": [
+            "default",
+            "hover",
+            "pressed",
+            "disabled",
+            "loading"
+          ],
+          "chat": [
+            "idle",
+            "typing",
+            "attaching",
+            "recording",
+            "uploading",
+            "sent",
+            "failed(retry)"
+          ]
+        },
+        "breakpoints": {
+          "iphone": {
+            "range": "320–430pt",
+            "card": "full width, 16pt margins, avatar 96pt, name 22pt, chat docked bottom sheet",
+            "touch_min": "44pt"
+          },
+          "ipad_portrait": {
+            "range": "744–834pt",
+            "grid": "2 columns, avatar 128pt, chat inline drawer"
+          },
+          "ipad_landscape": {
+            "range": "1024–1366pt",
+            "grid": "3 columns, avatar 144pt, chat side panel 360pt"
+          }
+        },
+        "a11y": [
+          "names contrast ≥4.5:1",
+          "avatar readable at 120px",
+          "prefers-reduced-motion disables loops",
+          "VoiceOver labels EN/AR"
+        ]
+      },
+      "avatar_system_ref": {
+        "style": "Sticker-cut portrait head (character with signature sunglasses/accessory) with ~6px cream outline + soft drop shadow, centred, chin at 62% height, over a flat saturated colour field with subtle grain; bold condensed display name in cream caps below the head; small role line under it.",
+        "canvas": "2048x2048 master (1:1), exports 1024/512/256; keep head inside centre 70% safe circle so a circular crop works at 120px",
+        "type": {
+          "latin_name": "Archivo Black, caps, tracking 0, height 11% of canvas",
+          "arabic_name": "IBM Plex Sans Arabic Bold, with full tashkeel as given, placed directly under Latin name at 70% of its size, right-to-left",
+          "role_line": "IBM Plex Sans SemiBold caps ~4.4% of canvas, tracking +12% (approved by Tarek 21 Oct 2026 14:19, was 3.2%); role line on 2048 masters only, dropped at 256 and 120 exports"
+        },
+        "layers": [
+          "L0 field",
+          "L1 grain",
+          "L2 glyph watermark",
+          "L3 head (transparent PNG)",
+          "L4 Latin name",
+          "L5 Arabic name",
+          "L6 role line"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+asset_id,asset_name,required_state,found,location,drive_id,use_now,notes
+A1,Basmala PNG 468x76,verified + NASAQ phone/tablet; desktop HOLD,NO,not in FINAL_v2.1 or handoff root,,NO,0 Drive title hits; do not invent; desktop HOLD
+A2,CEREBRO wordmark,BLOCKED placeholder only,NO,blocked white-on-white,,PLACEHOLDER_ONLY,no approx; no YAH marks as substitute
+A3,YAH marks wordmark-*-white.png,not CEREBRO,YES,YAHsocialmedia_Folder/marks,1Kb1FoDpFH-yPIxoKBIZ-VUgCJBW0QET6 (en-white example),NO,different product; banned as CEREBRO wordmark
+A4,FINAL_v2.1 READY avatar packs (14),READY_v2.1,YES,FINAL_v2.1_20261021_Cairo,1McFWijvedH0BGLSIzGkfiak6D9G4jaob,YES,Gate/AgentCard tiles for READY seats
+A5,NASAQ head,PLACEHOLDER,NO,no folder under FINAL_v2.1,,PLACEHOLDER,do not invent
+A6,MADAR head,PLACEHOLDER,NO,no folder under FINAL_v2.1,,PLACEHOLDER,do not invent
+A7,NABR head,PLACEHOLDER,NO,no folder under FINAL_v2.1,,PLACEHOLDER,do not invent
+A8,Samna/SAMNA head,PLACEHOLDER,NO,no folder under FINAL_v2.1,,PLACEHOLDER,do not invent
+A9,AGENT_COLOUR_KEY_v1.3.jpg,roster colour check,YES,handoff root,1zQTSFU4PXAfGevj_GqusxD26LwVPUaWy,YES,v1.5 spellings authoritative
+A10,contact_sheet_FINAL_v2.1.png,roster overview,YES,FINAL_v2.1,1UNe782DXFv44HBA094csaD71OG9r9jQy,YES,reference
+A11,strip_120_FINAL_v2.1.png,roster strip,YES,FINAL_v2.1,1wgCUQaX0x6dGbJ0UTeG8t0sXjGucYzzf,YES,reference
+A12,register_FINAL_v2.1.csv,register,YES,FINAL_v2.1,1xqbf5LJe1ZGjK7JEFUTjSmde0n8biT6a,YES,meta
+A13,local cerebro_handoff mirror,env mirror,NO,/workspace/cerebro_handoff,,BLOCKED,MISSING on this box
+A14,Drive CEREBRO_HANDOFF_KINZO_20261021,handoff root,YES,Drive folder,1Z6HvmyVdBRiP_MnvEGqYF9KAFGGmlvoK,YES_REMOTE,remote OK; local MISSING

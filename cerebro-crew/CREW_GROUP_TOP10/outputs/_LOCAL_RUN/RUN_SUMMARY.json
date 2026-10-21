@@ -1,0 +1,236 @@
+{
+  "mode": "local-terminal",
+  "external_services": [],
+  "started_at": "2026-10-21T16:30:19.646Z",
+  "finished_at": "2026-10-21T16:30:19.719Z",
+  "pack": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10",
+  "earlier_run": {
+    "id": "run-51679fc3-8284-4c48-91a8-8029a2257458",
+    "local_status": "NOT_AVAILABLE"
+  },
+  "cerebro_handoff": "MISSING",
+  "agents": [
+    {
+      "latin": "BANNA",
+      "pid": 9044,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs BANNA",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/BANNA.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/BANNA.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BANNA/stubs/PersistentBrandHeader.local.ts",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BANNA/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "Implement PersistentBrandHeader + Gate/glass P0 on feat/ds-v1-1. Obsidian tiles NOT final. Leave parallax/4-col/shadow switchable."
+    },
+    {
+      "latin": "NASAQ",
+      "pid": 9045,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs NASAQ",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/NASAQ.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/NASAQ.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/NASAQ_DS_v1_1_TOKEN_NOTES_GateBrandHeader_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/NASAQ/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "Brand-match + D0 tokens. Object shade #0A131A is test not frozen. Pass Basmala phone/tablet; desktop retina HOLD. Review before Fakir/Tarek."
+    },
+    {
+      "latin": "RASMA",
+      "pid": 9046,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs RASMA",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/RASMA.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/RASMA.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/RASMA/RASMA_CEREBRO_21_SCREEN_INDEX_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/RASMA/RASMA_CEREBRO_BrandHeader_SLOT_MAP_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/RASMA/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "Layouts from approved systems. Obsidian hero render in progress elsewhere — only real lit renders to Tarek. AgentCanvas refs."
+    },
+    {
+      "latin": "FAKIR",
+      "pid": 9047,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs FAKIR",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/FAKIR.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/FAKIR.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/FAKIR/FAKIR_CEREBRO_Craft_READINESS_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/FAKIR/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "ECD craft pass after NASAQ. No invented visuals. Design gate third seat."
+    },
+    {
+      "latin": "MADAR",
+      "pid": 9053,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs MADAR",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/MADAR.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/MADAR.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/MADAR/MADAR_LOADER_PLACEHOLDER_1p8_12s_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/MADAR/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "Motion/loader: Tarek timeline 0–1.8s only. 1.8–12s MADAR fill = PLACEHOLDER until Tarek. Globe lighting in progress elsewhere."
+    },
+    {
+      "latin": "GRANDY",
+      "pid": 9061,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs GRANDY",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/GRANDY.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/GRANDY.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/GRANDY/GRANDY_OPS_GATE_LOCAL_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/GRANDY/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "COO gates/routing. Enforce hard rules: feat/ds-v1-1 only, no merge/PR/deploy, no voice/auth/WebGL/deps. Dispatch A/B after gate."
+    },
+    {
+      "latin": "MUSA",
+      "pid": 9065,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs MUSA",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/MUSA.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/MUSA.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/MUSA/MUSA_PROVENANCE_LOCAL_20261021_Cairo_v1.0.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/MUSA/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03",
+        "MUSA-BLK-BASMALA"
+      ],
+      "mission": "Verified imagery/assets for header/gate. Provenance only — no invented heads for NASAQ/MADAR/NABR/Samna."
+    },
+    {
+      "latin": "KATIB",
+      "pid": 9079,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs KATIB",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/KATIB.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/KATIB.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_strings_20261021_Cairo_v1.0.json",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/KATIB/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "UI copy EN/AR for Gate + BrandHeader. Arabic tashkeel as v1.5. No approx wordmark."
+    },
+    {
+      "latin": "ZEBDA",
+      "pid": 9089,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs ZEBDA",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/ZEBDA.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/ZEBDA.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/ZEBDA/COORD_BOARD_20261021.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/ZEBDA/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "Coordination + minutes. Keep design-gate queue Rasma→NASAQ→Fakir→Nojj. Track open Tarek calls."
+    },
+    {
+      "latin": "BILAL",
+      "pid": 9092,
+      "command": "/exec-daemon/node /workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/local-runner/agent-worker.mjs BILAL",
+      "stdout": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/BILAL.stdout.log",
+      "stderr": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/_LOCAL_RUN/BILAL.stderr.log",
+      "launched": true,
+      "exit_code": 0,
+      "signal": null,
+      "stderr_tail": "",
+      "produced": [
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BILAL/BILAL_KINZO39_STATUS_LOCAL_20261021_Cairo_v1.0_INFO.md",
+        "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BILAL/LANE_STATUS.md"
+      ],
+      "blockers": [
+        "BLK-HANDOFF",
+        "BLK-01",
+        "BLK-02",
+        "BLK-03"
+      ],
+      "mission": "PMO Comms / Creator Intelligence. Internal-only status packs; colour-band ownership on INFO/EXEC."
+    }
+  ]
+}
