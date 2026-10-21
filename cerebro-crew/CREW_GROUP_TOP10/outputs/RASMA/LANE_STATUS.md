@@ -80,3 +80,6 @@
 3. Fakir: craft only on real lit — reject mock hero as PASS.  
 
 — RASMA · رَسْمَة · 2026-10-21 Cairo
+
+## Ref delta
+- Screen study 10-up staged: `cerebro-crew/assets/refs/CEREBRO_UPGRADED_SCREEN_STUDY_10up_20261021.jpg` (concept only).
