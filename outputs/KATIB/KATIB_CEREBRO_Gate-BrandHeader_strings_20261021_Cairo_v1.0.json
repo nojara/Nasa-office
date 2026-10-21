@@ -1,0 +1,19 @@
+{
+  "agent": "KATIB",
+  "internal": true,
+  "strings": {
+    "brand.header.aria": {
+      "en": "Cerebro brand",
+      "ar": "عَلامَةُ سِيرِيبْرُو"
+    },
+    "brand.wordmark.slot.aria": {
+      "en": "CEREBRO wordmark pending — blocked white-on-white",
+      "ar": "خَانَةُ عَلامَةِ سِيرِيبْرُو مُعَلَّقَة — مَحْجُوبَة (أَبْيَضُ عَلَى أَبْيَض)"
+    },
+    "brand.wordmark.visible": {
+      "en": null,
+      "ar": null,
+      "status": "BLOCKED"
+    }
+  }
+}

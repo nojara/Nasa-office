@@ -1,0 +1,208 @@
+{
+  "schema": "nojara.cerebro.KatibStrings",
+  "version": "1.1",
+  "supersedes": "1.0",
+  "internal": true,
+  "publish": false,
+  "client_send": false,
+  "pack": "AGENT_ROSTER_SPEC_PACK_v1.5",
+  "scope": ["Gate_P0", "PersistentBrandHeader"],
+  "branch_target": "feat/ds-v1-1",
+  "repo_target": "njr39/Cerebro-core",
+  "built_at": "2026-10-21 Cairo",
+  "agent": {
+    "latin": "KATIB",
+    "arabic": "كاتِب",
+    "agent_id": "8bdf7a89-cea3-4fe7-81e8-e0c1e5cdd2ad",
+    "field_colour": "#9F1F2D",
+    "text_on_colour": "#EEE5D4"
+  },
+  "rules": {
+    "tashkeel": "v1.5",
+    "wordmark": "BLOCKED_no_approx",
+    "spelling": { "HAQQ": true, "HAQI": false },
+    "locales": ["en", "ar"]
+  },
+  "strings": {
+    "brand.header.aria": {
+      "en": "Cerebro brand",
+      "ar": "عَلامَةُ سِيرِيبْرُو",
+      "tag": "KATIB_CLEAR",
+      "note": "Spoken a11y only — never drawn in wordmark slot"
+    },
+    "brand.wordmark.slot.aria": {
+      "en": "CEREBRO wordmark pending — blocked white-on-white",
+      "ar": "خَانَةُ عَلامَةِ سِيرِيبْرُو مُعَلَّقَة — مَحْجُوبَة (أَبْيَضُ عَلَى أَبْيَض)",
+      "tag": "BRIEF"
+    },
+    "brand.wordmark.slot.qa": {
+      "en": "[Cerebro wordmark pending]",
+      "ar": "[عَلامَةُ سِيرِيبْرُو مُعَلَّقَة]",
+      "tag": "BRIEF",
+      "visibility": "internal_qa_only",
+      "default_gate": "omit"
+    },
+    "brand.wordmark.visible": {
+      "en": "",
+      "ar": "",
+      "tag": "BLOCKED",
+      "note": "Empty — no approx lettering"
+    },
+    "brand.basmala.asset": {
+      "en": null,
+      "ar": null,
+      "tag": "BRIEF",
+      "note": "PNG 468×76 — no text glyph"
+    },
+    "brand.basmala.alt": {
+      "en": "In the name of God, the Most Gracious, the Most Merciful",
+      "ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "tag": "PRD",
+      "tashkeel": "v1.5"
+    },
+    "brand.basmala.alt.plain": {
+      "en": null,
+      "ar": "بسم الله الرحمن الرحيم",
+      "tag": "BRIEF",
+      "note": "BANNA stub source form; prefer brand.basmala.alt when text is used"
+    },
+    "brand.basmala.missing": {
+      "en": "Basmala asset pending",
+      "ar": "أَصْلُ الْبَسْمَلَةِ مُعَلَّق",
+      "tag": "KATIB_PROPOSED",
+      "prefer": "aria-hidden when data-asset=basmala-pending"
+    },
+    "gate.code.prompt": {
+      "en": "Enter your owner code.",
+      "ar": "أَدْخِلْ رَمْزَ الْمَالِكِ.",
+      "tag": "MISSION+KATIB_CLEAR",
+      "lock": true
+    },
+    "gate.code.label": {
+      "en": "Owner code",
+      "ar": "رَمْزُ الْمَالِكِ",
+      "tag": "PRD+KATIB_CLEAR"
+    },
+    "gate.code.placeholder.short": {
+      "en": "Enter owner code",
+      "ar": "أَدْخِلْ رَمْزَ الْمَالِكِ",
+      "tag": "C16",
+      "note": "Only if layout truncates full prompt"
+    },
+    "gate.code.purpose": {
+      "en": "Owner-only entry",
+      "ar": "دُخُولُ الْمَالِكِ فَقَط",
+      "tag": "C16"
+    },
+    "gate.code.state.idle": {
+      "en": "Enter your owner code.",
+      "ar": "أَدْخِلْ رَمْزَ الْمَالِكِ.",
+      "tag": "KATIB_CLEAR"
+    },
+    "gate.code.state.typing": {
+      "en": "Enter your owner code.",
+      "ar": "أَدْخِلْ رَمْزَ الْمَالِكِ.",
+      "tag": "KATIB_CLEAR"
+    },
+    "gate.code.state.unlocking": {
+      "en": "Unlocking…",
+      "ar": "جَارٍ فَتْحُ الْقُفْلِ…",
+      "tag": "KATIB_PROPOSED"
+    },
+    "gate.code.state.wrong": {
+      "en": "That code is not recognised.",
+      "ar": "هَذَا الرَّمْزُ غَيْرُ مَعْرُوفٍ.",
+      "tag": "KATIB_PROPOSED"
+    },
+    "gate.code.state.lockout": {
+      "en": "Locked. Try again in {n}s.",
+      "ar": "مَقْفُولٌ. حَاوِلْ مَرَّةً أُخْرَى بَعْدَ {n} ث.",
+      "tag": "KATIB_PROPOSED",
+      "tokens": ["n"]
+    },
+    "gate.code.a11y.field": {
+      "en": "Owner code entry",
+      "ar": "حَقْلُ إِدْخَالِ رَمْزِ الْمَالِكِ",
+      "tag": "KATIB_CLEAR"
+    },
+    "gate.code.a11y.delete": {
+      "en": "Delete last digit",
+      "ar": "احْذِفِ الرَّقْمَ الْأَخِيرَ",
+      "tag": "KATIB_PROPOSED"
+    },
+    "gate.code.a11y.key": {
+      "en": "Digit {d}",
+      "ar": "الرَّقْمُ {d}",
+      "tag": "KATIB_PROPOSED",
+      "tokens": ["d"]
+    },
+    "gate.wake.greeting": {
+      "en": "Go ahead, sir.",
+      "ar": "تَفَضَّلْ، سَيِّدِي.",
+      "tag": "PRD",
+      "lock": true,
+      "note": "Katib sign-off CLEAR EN; AR = transcreation"
+    },
+    "gate.keys.row.aria": {
+      "en": "Gate stations",
+      "ar": "مَحَطَّاتُ الْبَوَّابَةِ",
+      "tag": "KATIB_CLEAR",
+      "advance": "v1.1",
+      "binds": "BANNA GateKeys aria-label"
+    },
+    "gate.keys.projects": {
+      "en": "Projects",
+      "ar": "مَشَارِيع",
+      "tag": "PRD",
+      "binds": "GlassKeyItem id=projects"
+    },
+    "gate.keys.people": {
+      "en": "People",
+      "ar": "أَشْخَاص",
+      "tag": "PRD",
+      "binds": "GlassKeyItem id=people"
+    },
+    "gate.keys.files": {
+      "en": "Files",
+      "ar": "مَلَفَّات",
+      "tag": "PRD",
+      "binds": "GlassKeyItem id=files"
+    },
+    "gate.keys.media": {
+      "en": "Media",
+      "ar": "وَسَائِط",
+      "tag": "PRD",
+      "binds": "GlassKeyItem id=media"
+    },
+    "gate.keys.tasks": {
+      "en": "Tasks",
+      "ar": "مَهَامّ",
+      "tag": "PRD",
+      "binds": "GlassKeyItem id=tasks"
+    },
+    "gate.loader.establish": {
+      "en": "Establishing Cerebro",
+      "ar": "جَارٍ تَأْسِيسُ سِيرِيبْرُو",
+      "tag": "MADAR→KATIB",
+      "advance": "v1.1",
+      "window_ms": [0, 1800],
+      "note": "Spoken/status on Gate during BrandHeader boot only — not a wordmark"
+    }
+  },
+  "gate_keys_default": [
+    { "id": "projects", "labelKey": "gate.keys.projects" },
+    { "id": "people", "labelKey": "gate.keys.people" },
+    { "id": "files", "labelKey": "gate.keys.files" },
+    { "id": "media", "labelKey": "gate.keys.media" },
+    { "id": "tasks", "labelKey": "gate.keys.tasks" }
+  ],
+  "banna_wire": {
+    "PersistentBrandHeader.aria-label": "brand.header.aria",
+    "wordmark-slot.aria-label": "brand.wordmark.slot.aria",
+    "wordmark-slot.qa-text": "brand.wordmark.slot.qa",
+    "basmala.img.alt": "brand.basmala.alt",
+    "GateKeys.aria-label": "gate.keys.row.aria",
+    "GlassKey.label": "gate.keys.{id}.en",
+    "GlassKey.labelAr": "gate.keys.{id}.ar"
+  }
+}
