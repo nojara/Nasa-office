@@ -10,29 +10,30 @@
 | Gate seat | **3rd** — after NASAQ · before Nojj |
 | Queue | Rasma → **NASAQ** → **Fakir** → Nojj |
 | Lit-render review order | NASAQ → Fakir → Tarek |
-| Status | **CRAFT CHECKLIST READY** · live craft PASS held |
+| Status | **CRAFT CHECKLIST READY** · live craft PASS **NOT ISSUED** |
+| Matrix | `LANE_STATUS.md` v1.2 · advanced vs peer evidence |
 | Date | 2026-10-21 Cairo |
 | Accent | `#5A1420` · text `#EEE5D4` |
 
-**Hard stance:** No invented visuals. No wordmark approximation. No picking Tarek open calls. Obsidian tiles are test, not final.
+**Hard stance:** No invented visuals. No wordmark approximation. No picking Tarek open calls. Obsidian tiles are test, not final. **Do not invent PASS.**
 
-Companion: `FAKIR_CEREBRO_BrandHeader-Gate_BLOCKERS_20261021_Cairo_v1.0.md`
+Companion: `FAKIR_CEREBRO_BrandHeader-Gate_BLOCKERS_20261021_Cairo_v1.0.md` · `LANE_STATUS.md`
 
 ---
 
 ## 0 · Preconditions (must clear before FAKIR craft PASS)
 
-| # | Check | Owner | State |
+| # | Check | Owner | State (2026-10-21 peer evidence · matrix v1.2) |
 | --- | --- | --- | --- |
-| 0.1 | NASAQ brand-match + D0 token pass landed in `outputs/NASAQ/` | NASAQ | **BLOCKED** — folder empty |
-| 0.2 | Basmala PNG 468×76 phone/tablet NASAQ pass | NASAQ | **BLOCKED** |
+| 0.1 | NASAQ brand-match + D0 token pass landed in `outputs/NASAQ/` | NASAQ | **DOCS LANDED** — checklist + TOKEN_NOTES · *not approval* · not ECD PASS |
+| 0.2 | Basmala PNG 468×76 phone/tablet NASAQ **visual** pass | NASAQ | **BLOCKED** — PASS *path* confirmed · visual stamp gated · PNG NOT FOUND (MUSA) |
 | 0.3 | Desktop retina Basmala decision | NASAQ / Tarek | **HOLD** (not FAKIR) |
-| 0.4 | BANNA PersistentBrandHeader + Gate/glass P0 on `feat/ds-v1-1` | BANNA | **BLOCKED** — await implement artifact |
-| 0.5 | MUSA provenance pack for header/gate assets (no invented heads) | MUSA | **BLOCKED** — await pack |
-| 0.6 | KATIB EN/AR UI copy, tashkeel per v1.5, no approx wordmark | KATIB | **BLOCKED** — await copy |
-| 0.7 | Real lit Gate / obsidian renders (not mock) for ECD eye | RASMA / MUSA | **BLOCKED** — mockup ≠ final |
+| 0.4 | BANNA PersistentBrandHeader + Gate/glass P0 on `feat/ds-v1-1` | BANNA | **BLOCKED** — SPEC+STUB only · Cerebro-core unreachable |
+| 0.5 | MUSA provenance pack for header/gate assets (no invented heads) | MUSA | **LANDED v1.1** — asset P0 blockers remain inside pack |
+| 0.6 | KATIB EN/AR UI copy, tashkeel per v1.5, no approx wordmark | KATIB | **LANDED v1.1** — microcopy + strings JSON |
+| 0.7 | Real lit Gate / obsidian renders (not mock) for ECD eye | RASMA / MUSA | **BLOCKED** — slot map thin · lit finals none |
 
-**Rule:** FAKIR does not craft-pass on placeholders, approximations, or invents. Seat 3 fires only after NASAQ seat 2 clears brand-match.
+**Rule:** FAKIR does not craft-pass on placeholders, approximations, or invents. Seat 3 fires only after NASAQ seat 2 **signs** brand-match on real frames — docs alone are not enough.
 
 ---
 
@@ -139,7 +140,7 @@ Checklist marks for live review:
 | **CRAFT PASS (seat 3)** | NASAQ cleared + BH/GT checks PASS + TC-1/2/3 still switchable + no invent + placeholder wordmark intact |
 | **Escalate to Tarek** | Lit-final obsidian / shadow tone / parallax / 4-col decision needed |
 
-**Current ECD stance (2026-10-21):** **HOLD / BLOCKED** — NASAQ + BANNA + MUSA + KATIB artifacts not in `outputs/` yet. Checklist is armed for the moment seat 2 clears.
+**Current ECD stance (2026-10-21 · matrix v1.2):** **HOLD / BLOCKED** — peer docs advanced (NASAQ TOKEN_NOTES + Basmala path, KATIB strings v1.1, MUSA provenance v1.1, BANNA/MADAR/RASMA stubs); **craft PASS NOT ISSUED** (no visual Basmala stamp, no lit, core unreachable, wordmark BLOCKED). See `LANE_STATUS.md`.
 
 ---
 
