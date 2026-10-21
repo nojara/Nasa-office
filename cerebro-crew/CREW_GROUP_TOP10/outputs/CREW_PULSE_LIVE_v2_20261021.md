@@ -5,7 +5,7 @@
 |---|---|---|
 | BANNA | bc-af4c1b3f-e4d6-57c8-a7e6-8c35749ff8a3 | BrandHeader + Gate stubs/slots filed |
 | NASAQ | bc-4d0dd0cc-2b08-509b-9835-a2e413892466 | D0 TOKEN_NOTES + Basmala phone/tablet PASS path |
-| RASMA | (local + pack) | 21-screen index + slot map (gate start) |
+| RASMA | bc-7dbb0aea-6a8a-5385-8675-9522325e4c52 | Layout slots + 21-screen index + BrandHeader slot map |
 | FAKIR | bc-eb4cb32d-a72c-5b9b-8dfa-2c4c08ea4dc1 | Craft readiness HOLD — PASS not issued |
 | MADAR | bc-e9be0bdb-1f4f-5be5-a0d7-1a14e8a85c78 | Loader 0–1.8s LOCKED · 1.8–12s PLACEHOLDER |
 | GRANDY | bc-2453080c-2f51-508f-bbf7-d2071e34010a | Ops-gate HOLD · A/B not dispatched |
@@ -19,3 +19,6 @@
 - CEREBRO wordmark BLOCKED
 - Basmala 468×76 not on disk / handoff path missing
 - Open Tarek calls ×3 switchable
+
+## Asset delta
+- CEREBRO wordmark **candidate** staged (`cerebro-crew/assets/brand/`) — NASAQ next; placeholder stays until PASS.
