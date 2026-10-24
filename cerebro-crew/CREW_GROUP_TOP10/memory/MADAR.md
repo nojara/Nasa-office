@@ -10,3 +10,4 @@
 - Look: volcanic glass / obsidian on 3D; logos flat white; D0 palette; #0A131A test not frozen
 - Agent id: `15e0b024-e7c9-47e6-ba15-97214659b500`
 - Arabic: مَدَار
+- Layer motion map v0.3 PROPOSED (Grandy handoff 2026-10-24) — reference only; do not lock

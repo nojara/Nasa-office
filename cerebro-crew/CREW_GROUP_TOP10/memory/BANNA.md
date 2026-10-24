@@ -10,3 +10,4 @@
 - Look: volcanic glass / obsidian on 3D; logos flat white; D0 palette; #0A131A test not frozen
 - Agent id: `d424a6d1-68f8-4004-a115-e4edf6dbb7ba`
 - Arabic: بَنّاء
+- Obsidian tile test (2026-10-24): **FAILS the bar** — grey metal / backlight seam / hex gaps / no floor reflection — material reference only
