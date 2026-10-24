@@ -1,0 +1,12 @@
+CRO-NXS voice orb motion - NEW keys, PROPOSED, not tested (NABR, 18 Oct 2026 19:30 Cairo)
+No orb/voice constants exist in heidelberg.ts or config.ts (checked /workspace/CRO_NXS_SRC/), so these are additions, not edits.
+ORB_IDLE_SCALE=1.00
+ORB_IDLE_GLOW=0.75-0.85
+ORB_IDLE_MS=6000
+ORB_LISTEN_ARC_MS=8000
+ORB_THINK_SWEEP_MS=4000
+ORB_SPEAK_ATTACK_MS=80
+ORB_SPEAK_RELEASE_MS=250
+ORB_SPEAK_MAX_SCALE=1.06
+ORB_EASE=follows global EASE (open call for @Nojj)
+ORB_REDUCED_MOTION=static
