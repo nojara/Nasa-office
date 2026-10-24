@@ -1,0 +1,12 @@
+[2026-10-21T16:30:19.704Z] LOADED RASMA pid=9046
+[2026-10-21T16:30:19.705Z] card=/workspace/brain/Agents Office/cerebro-crew/RASMA_AgentCard_v1.5_20261021_Cairo.json
+[2026-10-21T16:30:19.705Z] mission=Layouts from approved systems. Obsidian hero render in progress elsewhere — only real lit renders to Tarek. AgentCanvas refs.
+[2026-10-21T16:30:19.705Z] BLOCKER BLK-HANDOFF [P1] cerebro_handoff missing — /workspace/cerebro_handoff not on this box (Zebda box path)
+[2026-10-21T16:30:19.705Z] BLOCKER BLK-01 [P0] Cerebro-core feat/ds-v1-1 unreachable locally — No local checkout of njr39/Cerebro-core; staging under outputs only
+[2026-10-21T16:30:19.705Z] BLOCKER BLK-02 [P0] CEREBRO wordmark BLOCKED — White-on-white — placeholder slot only; do not approximate
+[2026-10-21T16:30:19.705Z] BLOCKER BLK-03 [P1] Open Tarek calls ×3 — Leave switchable: parallax 6px|none · status board 4-col|not · shadow tone
+[2026-10-21T16:30:19.705Z] WROTE RASMA_CEREBRO_21_SCREEN_INDEX_20261021_Cairo_v1.0.md (525 bytes)
+[2026-10-21T16:30:19.705Z] WROTE RASMA_CEREBRO_BrandHeader_SLOT_MAP_20261021_Cairo_v1.0.md (353 bytes)
+[2026-10-21T16:30:19.705Z] WROTE LANE_STATUS.md (154 bytes)
+[2026-10-21T16:30:19.705Z] WROTE PROCESS.json (3246 bytes)
+[2026-10-21T16:30:19.705Z] DONE RASMA exit=0 produced=4 blockers=4

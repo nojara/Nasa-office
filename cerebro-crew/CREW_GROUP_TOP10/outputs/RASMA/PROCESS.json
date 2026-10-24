@@ -1,0 +1,61 @@
+{
+  "latin": "RASMA",
+  "arabic": "رَسْمَة",
+  "agent_id": "7b0ebc02-4f25-4cd3-9798-60ba042b89eb",
+  "role": "Layouts and production from approved brand systems",
+  "field_colour": "#244CC9",
+  "text_on_colour": "#EEE5D4",
+  "avatar_status": "READY_v2.1",
+  "crew": "CEREBRO_DS_v1_1_CREW_TOP10",
+  "session": "bc-7dbb0aea-6a8a-5385-8675-9522325e4c52",
+  "started_on": "Layout slots + 21-screen index + BrandHeader slot map",
+  "branch_target": "feat/ds-v1-1",
+  "publish": false,
+  "finished_at": "2026-10-21T19:35:00+03:00",
+  "files": [
+    "RASMA_CEREBRO_LAYOUT_SLOTS_20261021_Cairo_v1.0.md",
+    "RASMA_CEREBRO_21_SCREEN_INDEX_20261021_Cairo_v1.0.md",
+    "RASMA_CEREBRO_BrandHeader_SLOT_MAP_20261021_Cairo_v1.0.md",
+    "LANE_STATUS.md",
+    "PROCESS.json"
+  ],
+  "paths": {
+    "crew": "brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/RASMA/",
+    "mirror": "outputs/RASMA/"
+  },
+  "blockers": [
+    {
+      "id": "R-01",
+      "severity": "P0",
+      "title": "Cerebro-core feat/ds-v1-1 unreachable"
+    },
+    {
+      "id": "R-02",
+      "severity": "P0",
+      "title": "CEREBRO wordmark BLOCKED white-on-white"
+    },
+    {
+      "id": "R-03",
+      "severity": "P1",
+      "title": "Open Tarek calls ×3 switchable not picked"
+    },
+    {
+      "id": "R-04",
+      "severity": "P1",
+      "title": "Basmala desktop retina HOLD; PNG not in FINAL_v2.1"
+    },
+    {
+      "id": "R-05",
+      "severity": "P2",
+      "title": "Obsidian hero elsewhere not lit-final"
+    },
+    {
+      "id": "R-06",
+      "severity": "P2",
+      "title": "Ambassador / blueprint TBD await Nojj"
+    }
+  ],
+  "hard_rules_ok": true,
+  "lit_renders_sent": [],
+  "next_seat": "NASAQ"
+}

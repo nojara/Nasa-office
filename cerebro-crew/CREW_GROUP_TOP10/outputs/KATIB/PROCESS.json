@@ -1,0 +1,65 @@
+{
+  "latin": "KATIB",
+  "arabic": "كاتِب",
+  "agent_id": "8bdf7a89-cea3-4fe7-81e8-e0c1e5cdd2ad",
+  "role": "Copy, scripts, Arabic/English adaptation, proofreading",
+  "field_colour": "#9F1F2D",
+  "text_on_colour": "#EEE5D4",
+  "avatar_status": "READY_v2.1",
+  "session": "bc-dd9dda53-c729-5700-ac81-6ec219cd6eaf",
+  "mode": "cursor-cloud",
+  "pack": "AGENT_ROSTER_SPEC_PACK_v1.5",
+  "mission": "UI copy EN/AR for Gate + BrandHeader. Arabic tashkeel as v1.5. No approx wordmark.",
+  "started_on": "Gate/BrandHeader EN/AR microcopy + strings JSON",
+  "status": "ADVANCED_v1.1",
+  "updated_at": "2026-10-21T19:29:00+02:00",
+  "produced": [
+    "outputs/KATIB/LANE_STATUS.md",
+    "outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_Microcopy_20261021_Cairo_v1.1_INTERNAL.md",
+    "outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_strings_20261021_Cairo_v1.1.json",
+    "outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_BLOCKERS_20261021_Cairo_v1.1.md",
+    "outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_Microcopy_20261021_Cairo_v1.0_INTERNAL.md",
+    "outputs/KATIB/KATIB_CEREBRO_Gate-BrandHeader_strings_20261021_Cairo_v1.0.json",
+    "brain/.../outputs/KATIB/ (mirror; gitignored)"
+  ],
+  "blockers": [
+    {
+      "id": "KATIB-BLK-01",
+      "title": "CEREBRO wordmark BLOCKED",
+      "severity": "P0",
+      "detail": "White-on-white — placeholder slot only; no approx"
+    },
+    {
+      "id": "KATIB-BLK-02",
+      "title": "Cerebro-core feat/ds-v1-1 unreachable",
+      "severity": "P0",
+      "detail": "Stage under outputs only; no merge/PR/deploy"
+    },
+    {
+      "id": "KATIB-BLK-03",
+      "title": "Basmala desktop retina HOLD",
+      "severity": "P1",
+      "detail": "Alt + tashkeel ready; PNG path pending desktop"
+    },
+    {
+      "id": "KATIB-BLK-04",
+      "title": "KATIB_PROPOSED field states",
+      "severity": "P2",
+      "detail": "wrong/lockout/unlocking/a11y — optional Nojj/Tarek confirm"
+    },
+    {
+      "id": "KATIB-BLK-05",
+      "title": "Open Tarek calls ×3",
+      "severity": "P1",
+      "detail": "Leave switchable: parallax · 4-col · shadow — do not pick"
+    }
+  ],
+  "hard_rules": [
+    "Gate + BrandHeader microcopy only",
+    "Arabic tashkeel per v1.5",
+    "No approx CEREBRO wordmark",
+    "HAQQ not HAQI",
+    "Internal only — no merge/PR/deploy",
+    "Stage outputs/KATIB/"
+  ]
+}

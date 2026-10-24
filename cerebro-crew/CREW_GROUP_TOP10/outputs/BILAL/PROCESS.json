@@ -1,0 +1,89 @@
+{
+  "latin": "BILAL",
+  "arabic": "بِلال",
+  "agent_id": "08308e9b-dd9e-4bb1-96ba-c4db67c2dea3",
+  "role": "PMO Communications and Creator Intelligence",
+  "field_colour": "#5B3A8C",
+  "avatar_status": "READY_v2.1",
+  "pid": 9092,
+  "mode": "local-terminal",
+  "external_services": [],
+  "loaded": {
+    "agentcard": "/workspace/brain/Agents Office/cerebro-crew/BILAL_AgentCard_v1.5_20261021_Cairo.json",
+    "capabilities": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/capabilities/BILAL.md",
+    "memory": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/memory/BILAL.md",
+    "knowledge": "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/knowledge/BILAL.md",
+    "card_keys": [
+      "schema",
+      "schema_version",
+      "source_pack",
+      "source_pack_locked",
+      "built_by",
+      "built_at",
+      "status",
+      "design_gate",
+      "publish",
+      "row",
+      "agent_id",
+      "name",
+      "name_status",
+      "meaning",
+      "role",
+      "avatar",
+      "output_standard",
+      "file_naming",
+      "cerebro_widget",
+      "avatar_system_ref"
+    ],
+    "capabilities_bytes": 753,
+    "memory_bytes": 862,
+    "knowledge_bytes": 1260
+  },
+  "mission": "PMO Comms / Creator Intelligence. Internal-only status packs; colour-band ownership on INFO/EXEC.",
+  "produced": [
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BILAL/BILAL_KINZO39_STATUS_LOCAL_20261021_Cairo_v1.0_INFO.md",
+    "/workspace/brain/Agents Office/cerebro-crew/CREW_GROUP_TOP10/outputs/BILAL/LANE_STATUS.md"
+  ],
+  "blockers": [
+    {
+      "id": "BLK-HANDOFF",
+      "title": "cerebro_handoff missing",
+      "severity": "P1",
+      "detail": "/workspace/cerebro_handoff not on this box (Zebda box path)"
+    },
+    {
+      "id": "BLK-01",
+      "title": "Cerebro-core feat/ds-v1-1 unreachable locally",
+      "severity": "P0",
+      "detail": "No local checkout of njr39/Cerebro-core; staging under outputs only"
+    },
+    {
+      "id": "BLK-02",
+      "title": "CEREBRO wordmark BLOCKED",
+      "severity": "P0",
+      "detail": "White-on-white — placeholder slot only; do not approximate"
+    },
+    {
+      "id": "BLK-03",
+      "title": "Open Tarek calls ×3",
+      "severity": "P1",
+      "detail": "Leave switchable: parallax 6px|none · status board 4-col|not · shadow tone"
+    }
+  ],
+  "hard_rules": [
+    "Repo njr39/Cerebro-core branch feat/ds-v1-1 ONLY",
+    "No new branches / merges / PRs / deploys",
+    "Do not touch voice, sound, auth, Google, gesture thresholds, WebGL renderer, dependencies",
+    "Review order lit: NASAQ → Fakir → Tarek",
+    "Design gate: Rasma → NASAQ → Fakir → Nojj",
+    "Internal only — publish nothing",
+    "HAQQ not HAQI",
+    "NASAQ/MADAR/NABR/Samna avatars PLACEHOLDER — do not invent"
+  ],
+  "earlier_run_check": {
+    "id": "run-51679fc3-8284-4c48-91a8-8029a2257458",
+    "status": "NOT_AVAILABLE_LOCALLY",
+    "note": "No local transcript/artifact for this run id on this box"
+  },
+  "finished_at": "2026-10-21T16:30:19.717Z"
+}

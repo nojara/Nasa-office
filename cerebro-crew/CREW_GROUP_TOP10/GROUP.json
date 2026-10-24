@@ -1,0 +1,230 @@
+{
+  "schema": "nojara.cerebro.CrewGroup",
+  "id": "cerebro-ds-v1-1-top10",
+  "name": "CEREBRO_DS_v1_1_CREW_TOP10",
+  "lead": "Kinzo",
+  "created": "2026-10-21 Cairo",
+  "source_pack": "AGENT_ROSTER_SPEC_PACK_v1.5_20261021_Cairo",
+  "branch": "feat/ds-v1-1",
+  "status": "LOCAL_TERMINAL_RUN",
+  "local_runner": "local-runner/run-top10.mjs",
+  "local_wave": "LOCAL_v1_20261021",
+  "live_wave": "LIVE_v2_20261021_superseded_by_local",
+  "live_sessions": {
+    "BANNA": "bc-af4c1b3f-e4d6-57c8-a7e6-8c35749ff8a3",
+    "NASAQ": "bc-4d0dd0cc-2b08-509b-9835-a2e413892466",
+    "RASMA": "bc-7dbb0aea-6a8a-5385-8675-9522325e4c52",
+    "FAKIR": "bc-eb4cb32d-a72c-5b9b-8dfa-2c4c08ea4dc1",
+    "MADAR": "bc-e9be0bdb-1f4f-5be5-a0d7-1a14e8a85c78",
+    "GRANDY": "bc-2453080c-2f51-508f-bbf7-d2071e34010a",
+    "MUSA": "bc-3ad4dbef-8c1a-5bc1-936e-320ebc3a648e",
+    "KATIB": "bc-dd9dda53-c729-5700-ac81-6ec219cd6eaf",
+    "ZEBDA": "bc-c7d5151f-3284-5df8-97e3-ee3f5438b4f5",
+    "BILAL": "bc-7f6a2a56-b8a0-58fe-b7e9-556c5535da41"
+  },
+  "hard_rules": [
+    "HARD RULES (Kinzo / Tarek):",
+    "- Repo njr39/Cerebro-core, branch feat/ds-v1-1 ONLY. No new branches, merges, PRs, deploys.",
+    "- Do NOT touch: voice config, sound channels, auth, Google config, gesture thresholds, WebGL renderer, dependencies.",
+    "- Open calls for Tarek — leave switchable, do NOT pick: (1) 6px parallax or none (2) status board 4 columns or not (3) shadow tone.",
+    "- Obsidian tile test still rendering — not final.",
+    "- NASAQ/MADAR/NABR/Samna avatars: PLACEHOLDER, do not invent.",
+    "- Name is HAQQ not HAQI. Internal only. Publish nothing.",
+    "- Review order for lit renders: NASAQ → Fakir → Tarek."
+  ],
+  "members": [
+    {
+      "order": 1,
+      "agent_id": "d424a6d1-68f8-4004-a115-e4edf6dbb7ba",
+      "latin": "BANNA",
+      "name": {
+        "en": "BANNA",
+        "ar": "بَنّاء"
+      },
+      "role": "Web design and development",
+      "meaning": "The builder: one who builds structure brick by brick",
+      "field_colour": "#FCCF3F",
+      "text_on_colour": "#302B26",
+      "avatar_status": "READY_v2.1",
+      "mission": "Implement PersistentBrandHeader + Gate/glass P0 on feat/ds-v1-1. Obsidian tiles NOT final. Leave parallax/4-col/shadow switchable.",
+      "capabilities_file": "capabilities/BANNA.md",
+      "memory_file": "memory/BANNA.md",
+      "knowledge_file": "knowledge/BANNA.md",
+      "agentcard": "../agentcards_v1.5/BANNA_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 2,
+      "agent_id": "dcffa3ef-682f-4e5f-8376-233e057a0dd8",
+      "latin": "NASAQ",
+      "name": {
+        "en": "NASAQ",
+        "ar": "نَسَق"
+      },
+      "role": "Design-library owner and brand-match checker",
+      "meaning": "Order, system",
+      "field_colour": "#0F5E5A",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+      "mission": "Brand-match + D0 tokens. Object shade #0A131A is test not frozen. Pass Basmala phone/tablet; desktop retina HOLD. Review before Fakir/Tarek.",
+      "capabilities_file": "capabilities/NASAQ.md",
+      "memory_file": "memory/NASAQ.md",
+      "knowledge_file": "knowledge/NASAQ.md",
+      "agentcard": "../agentcards_v1.5/NASAQ_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 3,
+      "agent_id": "7b0ebc02-4f25-4cd3-9798-60ba042b89eb",
+      "latin": "RASMA",
+      "name": {
+        "en": "Rasma",
+        "ar": "رَسْمَة"
+      },
+      "role": "Layouts and production from approved brand systems",
+      "meaning": "A drawing",
+      "field_colour": "#244CC9",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "Layouts from approved systems. Obsidian hero render in progress elsewhere — only real lit renders to Tarek. AgentCanvas refs.",
+      "capabilities_file": "capabilities/RASMA.md",
+      "memory_file": "memory/RASMA.md",
+      "knowledge_file": "knowledge/RASMA.md",
+      "agentcard": "../agentcards_v1.5/RASMA_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 4,
+      "agent_id": "19733431-9122-41c4-82e5-2da2d5274288",
+      "latin": "FAKIR",
+      "name": {
+        "en": "Fakir",
+        "ar": "فاكِر"
+      },
+      "role": "Executive Creative Director",
+      "meaning": "Thinker / one who remembers",
+      "field_colour": "#5A1420",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "ECD craft pass after NASAQ. No invented visuals. Design gate third seat.",
+      "capabilities_file": "capabilities/FAKIR.md",
+      "memory_file": "memory/FAKIR.md",
+      "knowledge_file": "knowledge/FAKIR.md",
+      "agentcard": "../agentcards_v1.5/FAKIR_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 5,
+      "agent_id": "15e0b024-e7c9-47e6-ba15-97214659b500",
+      "latin": "MADAR",
+      "name": {
+        "en": "MADAR",
+        "ar": "مَدَار"
+      },
+      "role": "Cinematic motion graphics and explainer films",
+      "meaning": "Orbit",
+      "field_colour": "#C7A0DC",
+      "text_on_colour": "#302B26",
+      "avatar_status": "PLACEHOLDER_NO_REFERENCE_HEAD",
+      "mission": "Motion/loader: Tarek timeline 0–1.8s only. 1.8–12s MADAR fill = PLACEHOLDER until Tarek. Globe lighting in progress elsewhere.",
+      "capabilities_file": "capabilities/MADAR.md",
+      "memory_file": "memory/MADAR.md",
+      "knowledge_file": "knowledge/MADAR.md",
+      "agentcard": "../agentcards_v1.5/MADAR_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 6,
+      "agent_id": "e100862f-a1c7-48ef-9a8e-490d3332c5ec",
+      "latin": "GRANDY",
+      "name": {
+        "en": "Grandy",
+        "ar": "غْرانْدِي"
+      },
+      "role": "COO · operations, gates, routing",
+      "meaning": "Coordinator & final internal gate",
+      "field_colour": "#173349",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "COO gates/routing. Enforce hard rules: feat/ds-v1-1 only, no merge/PR/deploy, no voice/auth/WebGL/deps. Dispatch A/B after gate.",
+      "capabilities_file": "capabilities/GRANDY.md",
+      "memory_file": "memory/GRANDY.md",
+      "knowledge_file": "knowledge/GRANDY.md",
+      "agentcard": "../agentcards_v1.5/GRANDY_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 7,
+      "agent_id": "78873ac9-2d44-48c0-8206-15f9295f8158",
+      "latin": "MUSA",
+      "name": {
+        "en": "Musa",
+        "ar": "مُصوِّر"
+      },
+      "role": "Verified original imagery, footage frames, asset provenance",
+      "meaning": "Musawir = the one who pictures",
+      "field_colour": "#DD3D14",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "Verified imagery/assets for header/gate. Provenance only — no invented heads for NASAQ/MADAR/NABR/Samna.",
+      "capabilities_file": "capabilities/MUSA.md",
+      "memory_file": "memory/MUSA.md",
+      "knowledge_file": "knowledge/MUSA.md",
+      "agentcard": "../agentcards_v1.5/MUSA_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 8,
+      "agent_id": "8bdf7a89-cea3-4fe7-81e8-e0c1e5cdd2ad",
+      "latin": "KATIB",
+      "name": {
+        "en": "Katib",
+        "ar": "كاتِب"
+      },
+      "role": "Copy, scripts, Arabic/English adaptation, proofreading",
+      "meaning": "Writer",
+      "field_colour": "#9F1F2D",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "UI copy EN/AR for Gate + BrandHeader. Arabic tashkeel as v1.5. No approx wordmark.",
+      "capabilities_file": "capabilities/KATIB.md",
+      "memory_file": "memory/KATIB.md",
+      "knowledge_file": "knowledge/KATIB.md",
+      "agentcard": "../agentcards_v1.5/KATIB_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 9,
+      "agent_id": "c0ba67ad-0789-443e-868e-bc7c568427a4",
+      "latin": "ZEBDA",
+      "name": {
+        "en": "Zebda",
+        "ar": "زِبْدَة"
+      },
+      "role": "Coordinator",
+      "meaning": "Cream / the essence",
+      "field_colour": "#2E7FB0",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "Coordination + minutes. Keep design-gate queue Rasma→NASAQ→Fakir→Nojj. Track open Tarek calls.",
+      "capabilities_file": "capabilities/ZEBDA.md",
+      "memory_file": "memory/ZEBDA.md",
+      "knowledge_file": "knowledge/ZEBDA.md",
+      "agentcard": "../agentcards_v1.5/ZEBDA_AgentCard_v1.5_20261021_Cairo.json"
+    },
+    {
+      "order": 10,
+      "agent_id": "08308e9b-dd9e-4bb1-96ba-c4db67c2dea3",
+      "latin": "BILAL",
+      "name": {
+        "en": "Bilal",
+        "ar": "بِلال"
+      },
+      "role": "PMO Communications and Creator Intelligence",
+      "meaning": "Confirmed credits, video IDs, view snapshots",
+      "field_colour": "#5B3A8C",
+      "text_on_colour": "#EEE5D4",
+      "avatar_status": "READY_v2.1",
+      "mission": "PMO Comms / Creator Intelligence. Internal-only status packs; colour-band ownership on INFO/EXEC.",
+      "capabilities_file": "capabilities/BILAL.md",
+      "memory_file": "memory/BILAL.md",
+      "knowledge_file": "knowledge/BILAL.md",
+      "agentcard": "../agentcards_v1.5/BILAL_AgentCard_v1.5_20261021_Cairo.json"
+    }
+  ],
+  "target_repo": "njr39/Cerebro-core",
+  "target_branch": "feat/ds-v1-1",
+  "note": "Staged pack: njr39/Cerebro-core was unreachable (404) from this runner; committed on Nasa-office feat/ds-v1-1 for review until Cerebro-core access is granted."
+}
